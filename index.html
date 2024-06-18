@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+File: index.html
+GUI Assignment: Using the jQuery Plugin/UI with Your Dynamic Table
+Andy Tran, UMass Lowell Computer Science, andy_tran1@student.uml.edu
+Copyright (c) 2024 by Andy. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by AT on June 17, 2024 at 11:15 PM
+-->
+
+<!-- 
+File Description:
+This file contains the HTML that shows the form and the scrollable table container. It links
+jQuery its validation plugin to check inputs to the form.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multiplication Table</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script type="text/JavaScript" src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HTML Markup -->
+    <div class="container">
+        <h1>Dynamic Multiplication Table</h1>
+        <!-- Form for table has required attribute for error handling. -->
+        <form id="tableForm">
+            <div>
+                <label for="minRowVal">Min Row Value:</label>
+                <input id="minRowVal" name="minRowVal" required>
+                <label for="maxRowVal">Max Row Value:</label>
+                <input id="maxRowVal" name="maxRowVal" required>
+            </div>
+            <div>
+                <label for="minColVal">Min Column Value:</label>
+                <input id="minColVal" name="minColVal" required>
+                <label for="maxColVal">Max Column Value:</label>
+                <input id="maxColVal" name="maxColVal" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Error and table containers empty and present at the bottom of the page. -->
+        <div id="errorContainer"></div>
+        <div id="tableContainer" class="table-scroll"></div>
+    </div>
+</body>
+
+</html>
